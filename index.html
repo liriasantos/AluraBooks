@@ -2,26 +2,27 @@
 <html>
 
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraBooks</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>AluraBooks</title>
+     <link rel="stylesheet" href="reset.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+     <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <header class="cabeçalho"> 
            <div class="container">
-            <input type="checkbox" id="menu" class="container__botao">
-            <label for="menu">
-                <span class="cabeçalho__menu-hambuguer container__imagem"></span>
-           </label>
-           <ul class="lista-menu">
-               <li class="lista-menu__titulo">Categorias</li>
-               <li class="lista-menu__item">
+               <input type="checkbox" id="menu" class="container__botao">
+               <label for="menu">
+            <span class="cabeçalho__menu-hambuguer container__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+            <li class="lista-menu__titulo">Categorias</li>
+            <li class="lista-menu__item">
                 <a href="#" class="lista-menu__link">Programação</a>
             </li>
             <li class="lista-menu__item">
@@ -36,7 +37,7 @@
             <li class="lista-menu__item">
                 <a href="#" class="lista-menu__link">Design & UX</a>
             </li>
-           </ul>
+        </ul>
            <img src="Logo.svg" alt="Logo da AluraBooks" class="container__imagem"> 
         </div>
         <div class="container">
@@ -50,7 +51,48 @@
             <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
             <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
         </section>
+        <section class="carrossel">
+            <h2 class="carrossel__titulo">Novos lançamentos</h2>
+            <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
 
-    </body>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="apachekafka.svg" alt="Livro sobre apache kafka e spring boot da alura books"></div>
+      <div class="swiper-slide"><img src="Liderança.svg" alt="Livro sobre liderança em design da alura AluraBooks"></div>
+      <div class="swiper-slide"><img src="Javascript.svg" alt="Livro sobre javascript asserrtivo da AluraBooks"></div>
+      <div class="swiper-slide"><img src="Guia Front-end.svg" alt="Livro Guia Front-end"></div>
+      <div class="swiper-slide"><img src="Portugol.svg" alt="Livro sobre Portugal"></div>
+      <div class="swiper-slide"><img src="Acessibilidade.svg" alt="Livro sobre acessibilidade"></div>
+      ...
+    </div>
+    
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                spaceBetween:10,
+                slidesPerview: 3,
+                pagination:{
+                    el:'swiper-pagination',
+                    type:'bullets',
+                },
+            });
+            
+           
+        </script>
+   </body>
 
 </html>

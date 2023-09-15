@@ -1,12 +1,13 @@
-@import url(styles/header.css);
-@import url(styles/banner.css);
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
 
 :root {
     --cor-de-fundo: #EBECEE;
     --branco:#FFFFFF;
     --laranja: #EB9B00;
     --azul-degrade:#002F52, #326589 ;
-    --fonte-principal: "poppins"
+    --fonte-principal:"Poppins";
 }
 
 body {
